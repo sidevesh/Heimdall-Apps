@@ -1,0 +1,10 @@
+{
+  "appid": "66c47f1db114b4bab452f705785d7caa92d7a370",
+  "name": "BootLeg",
+  "website": "https://github.com/sidevesh/bootleg",
+  "license": "MIT License",
+  "description": "BootLeg is a self-hosted game collection and backlog tracker backed by IGDB, for tracking what you own, want, are playing, or have beaten.",
+  "enhanced": true,
+  "tile_background": "dark",
+  "icon": "bootleg.svg"
+}
