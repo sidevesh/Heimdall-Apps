@@ -16,6 +16,13 @@ class openmediavault extends \App\SupportedApps implements \App\EnhancedApps // 
         $this->cookie = new \GuzzleHttp\Cookie\CookieJar();
     }
 
+    public function getConfigValue($key, $default = null)
+    {
+        return isset($this->config) && isset($this->config->$key)
+            ? $this->config->$key
+            : $default;
+    }
+
     public function url($endpoint)
     {
         $api_url = parent::normaliseurl($this->config->url) . "rpc.php";
@@ -32,6 +39,10 @@ class openmediavault extends \App\SupportedApps implements \App\EnhancedApps // 
             ],
             "cookies" => $this->cookie,
         ];
+
+        if ($this->getConfigValue("ignore_tls", false)) {
+            $attrs["verify"] = false;
+        }
 
         // @see \App\SupportedApps\execute($url, $attrs = [], $overridevars=false, $overridemethod=false)
         $result = parent::execute($this->url(false), $attrs, null, "POST");
