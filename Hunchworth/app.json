@@ -1,0 +1,10 @@
+{
+  "appid": "130bfde24f4833c30b6ce550a3eaaf55bfc4fb79",
+  "name": "Hunchworth",
+  "website": "https://github.com/sidevesh/lode",
+  "license": "Proprietary",
+  "description": "Hunchworth checks app and SaaS ideas against real demand, rival apps and complaint threads before you build.",
+  "enhanced": true,
+  "tile_background": "dark",
+  "icon": "hunchworth.svg"
+}
